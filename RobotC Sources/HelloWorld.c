@@ -1,8 +1,16 @@
+#define LEFT_WHEEL motorA
+#define RIGHT_WHEEL motorD
+#define SONAR S1
 
+task main() {
 
-task main () {
+	setMotorSpeed (LEFT_WHEEL, 100);
+	setMotorSpeed (RIGHT_WHEEL, 100);
 
-displayBigTextLine (0, "%s", "test");
-while (true) {}
+	while (getUSDistance(SONAR) > 5) {
+	}
+
+	setMotorSpeed (LEFT_WHEEL, 0);
+	setMotorSpeed (RIGHT_WHEEL, 0);
 
 }
