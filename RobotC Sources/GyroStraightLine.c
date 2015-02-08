@@ -3,8 +3,8 @@
 #define GYRO S2
 
 void moveSteering (int dir, int pwr) {
-	setMotorSpeed (LEFT_WHEEL, pwr - dir);
-	setMotorSpeed (RIGHT_WHEEL, pwr + dir);
+	setMotorSpeed (LEFT_WHEEL, pwr/dir);
+	setMotorSpeed (RIGHT_WHEEL, pwr);
 }
 
 task main() {
